@@ -1,0 +1,47 @@
+{
+  "resource": "Password Views",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "api/v1/password_views/:encrypted_token",
+  "description": "Get list",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "encrypted_token",
+      "description": "Password set link"
+    },
+    {
+      "required": false,
+      "name": "page",
+      "description": "Pagination, default 1"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/v1/password_views/1G1ENxSuJz640c9eKgIA%2F3SMRNeAQy3mv32BdFmuZokphP9VkSKkSqQ4Zz0n%0AT4w%2F%0A?page=1&format=json",
+      "request_body": null,
+      "request_headers": {
+        "Access-Token": "c8892dc1f2367d0ebbfdac93b5354b21",
+        "Host": "example.org"
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "format": "json"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"total_pages\": 1,\n  \"total_entries\": 3,\n  \"previous_page\": null,\n  \"current_page\": 1,\n  \"next_page\": null,\n  \"per_page\": 25,\n  \"password_views\": [\n    {\n      \"status\": \"viewed\",\n      \"created_at\": \"2018-10-14T20:19:54.403Z\",\n      \"ip\": null,\n      \"user_email\": \"ianwilliamson@moen.co\"\n    },\n    {\n      \"status\": \"viewed\",\n      \"created_at\": \"2018-10-14T20:19:54.413Z\",\n      \"ip\": null,\n      \"user_email\": \"tuannienow@dietrich.net\"\n    },\n    {\n      \"status\": \"viewed\",\n      \"created_at\": \"2018-10-14T20:19:54.423Z\",\n      \"ip\": null,\n      \"user_email\": \"jeannetta@mclaughlindaniel.io\"\n    }\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://localhost:8080/api/v1/password_views/1G1ENxSuJz640c9eKgIA%2F3SMRNeAQy3mv32BdFmuZokphP9VkSKkSqQ4Zz0n%0AT4w%2F%0A?page=1&format=json\" -X GET \\\n\t-H \"Access-Token: c8892dc1f2367d0ebbfdac93b5354b21\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

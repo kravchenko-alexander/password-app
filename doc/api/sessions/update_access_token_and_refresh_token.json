@@ -1,0 +1,41 @@
+{
+  "resource": "Sessions",
+  "resource_explanation": null,
+  "http_method": "PUT",
+  "route": "api/v1/sessions",
+  "description": "Update access token and refresh token",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "api/v1/sessions",
+      "request_body": "format=json",
+      "request_headers": {
+        "Refresh-Token": "9e200ba92507c4fcae9b78c4693d26fd",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": null,
+      "response_headers": {
+        "Access-Token": "INHYJITT1539548395LEJSMRLX",
+        "Access-Token-Expired-At": "2018-10-14 21:19:55 UTC",
+        "Refresh-Token": "WXXSXDBN1539548395SORBSFIH",
+        "Refresh-Token-Expired-At": "2019-10-14 20:19:55 UTC",
+        "Content-Type": "application/json"
+      },
+      "response_content_type": "application/json",
+      "curl": "curl \"http://localhost:8080/api/v1/sessions\" -d 'format=json' -X PUT \\\n\t-H \"Refresh-Token: 9e200ba92507c4fcae9b78c4693d26fd\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

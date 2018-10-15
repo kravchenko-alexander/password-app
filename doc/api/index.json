@@ -1,0 +1,259 @@
+{
+  "resources": [
+    {
+      "name": "Password Sets",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create [UNAUTHORIZED (invalid Access-Token)]",
+          "link": "password_sets/create_[unauthorized_(invalid_access-token)].json",
+          "groups": "all",
+          "route": "api/v1/password_sets",
+          "method": "post"
+        },
+        {
+          "description": "Create [UNAUTHORIZED (Expired Access-Token)]",
+          "link": "password_sets/create_[unauthorized_(expired_access-token)].json",
+          "groups": "all",
+          "route": "api/v1/password_sets",
+          "method": "post"
+        },
+        {
+          "description": "Create password link for single password",
+          "link": "password_sets/create_password_link_for_single_password.json",
+          "groups": "all",
+          "route": "api/v1/password_sets",
+          "method": "post"
+        },
+        {
+          "description": "Create password link for list of passwords",
+          "link": "password_sets/create_password_link_for_list_of_passwords.json",
+          "groups": "all",
+          "route": "api/v1/password_sets",
+          "method": "post"
+        },
+        {
+          "description": "Get decrypted password set [FORBIDDEN]",
+          "link": "password_sets/get_decrypted_password_set_[forbidden].json",
+          "groups": "all",
+          "route": "api/v1/password_sets/:encrypted_token",
+          "method": "get"
+        },
+        {
+          "description": "Get decrypted password set for single password",
+          "link": "password_sets/get_decrypted_password_set_for_single_password.json",
+          "groups": "all",
+          "route": "api/v1/password_sets/:encrypted_token",
+          "method": "get"
+        },
+        {
+          "description": "Get decrypted list for list of passwords",
+          "link": "password_sets/get_decrypted_list_for_list_of_passwords.json",
+          "groups": "all",
+          "route": "api/v1/password_sets/:encrypted_token",
+          "method": "get"
+        },
+        {
+          "description": "Get decrypted password from already decrypted set [FORBIDDEN]",
+          "link": "password_sets/get_decrypted_password_from_already_decrypted_set_[forbidden].json",
+          "groups": "all",
+          "route": "api/v1/password_sets/:encrypted_token",
+          "method": "get"
+        },
+        {
+          "description": "Get decrypted password set, invalid link [FORBIDDEN]",
+          "link": "password_sets/get_decrypted_password_set,_invalid_link_[forbidden].json",
+          "groups": "all",
+          "route": "api/v1/password_sets/:encrypted_token",
+          "method": "get"
+        },
+        {
+          "description": "Get decrypted password set, invalid Access-Token [UNAUTHORIZED]",
+          "link": "password_sets/get_decrypted_password_set,_invalid_access-token_[unauthorized].json",
+          "groups": "all",
+          "route": "api/v1/password_sets/:encrypted_token",
+          "method": "get"
+        },
+        {
+          "description": "Get decrypted password set for single password by user ",
+          "link": "password_sets/get_decrypted_password_set_for_single_password_by_user_.json",
+          "groups": "all",
+          "route": "api/v1/password_sets/:encrypted_token",
+          "method": "get"
+        },
+        {
+          "description": "Get decrypted list for list of passwords by user",
+          "link": "password_sets/get_decrypted_list_for_list_of_passwords_by_user.json",
+          "groups": "all",
+          "route": "api/v1/password_sets/:encrypted_token",
+          "method": "get"
+        },
+        {
+          "description": "Get decrypted password from already decrypted set by user [FORBIDDEN]",
+          "link": "password_sets/get_decrypted_password_from_already_decrypted_set_by_user_[forbidden].json",
+          "groups": "all",
+          "route": "api/v1/password_sets/:encrypted_token",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Password Views",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Get list",
+          "link": "password_views/get_list.json",
+          "groups": "all",
+          "route": "api/v1/password_views/:encrypted_token",
+          "method": "get"
+        },
+        {
+          "description": "Get list [UNAUTHORIZED (Access-Token is wrong)]",
+          "link": "password_views/get_list_[unauthorized_(access-token_is_wrong)].json",
+          "groups": "all",
+          "route": "api/v1/password_views/:encrypted_token",
+          "method": "get"
+        },
+        {
+          "description": "Get list [UNAUTHORIZED (Access-Token is expired)]",
+          "link": "password_views/get_list_[unauthorized_(access-token_is_expired)].json",
+          "groups": "all",
+          "route": "api/v1/password_views/:encrypted_token",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Registration",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create new user",
+          "link": "registration/create_new_user.json",
+          "groups": "all",
+          "route": "api/v1/registrations",
+          "method": "post"
+        },
+        {
+          "description": "Create new user invalid [INVALID]",
+          "link": "registration/create_new_user_invalid_[invalid].json",
+          "groups": "all",
+          "route": "api/v1/registrations",
+          "method": "post"
+        },
+        {
+          "description": "Update user password",
+          "link": "registration/update_user_password.json",
+          "groups": "all",
+          "route": "api/v1/registrations",
+          "method": "put"
+        },
+        {
+          "description": "Update user password [UNPROCESSABLE ENTITY]",
+          "link": "registration/update_user_password_[unprocessable_entity].json",
+          "groups": "all",
+          "route": "api/v1/registrations",
+          "method": "put"
+        },
+        {
+          "description": "Update user password [UNAUTHORIZED]",
+          "link": "registration/update_user_password_[unauthorized].json",
+          "groups": "all",
+          "route": "api/v1/registrations",
+          "method": "put"
+        }
+      ]
+    },
+    {
+      "name": "Sessions",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Login",
+          "link": "sessions/login.json",
+          "groups": "all",
+          "route": "api/v1/sessions",
+          "method": "post"
+        },
+        {
+          "description": "Login with invalid password [UNPROCESSABLE ENTITY]",
+          "link": "sessions/login_with_invalid_password_[unprocessable_entity].json",
+          "groups": "all",
+          "route": "api/v1/sessions",
+          "method": "post"
+        },
+        {
+          "description": "Login in with invalid email [UNPROCESSABLE ENTITY]",
+          "link": "sessions/login_in_with_invalid_email_[unprocessable_entity].json",
+          "groups": "all",
+          "route": "api/v1/sessions",
+          "method": "post"
+        },
+        {
+          "description": "Sign out",
+          "link": "sessions/sign_out.json",
+          "groups": "all",
+          "route": "api/v1/sessions",
+          "method": "delete"
+        },
+        {
+          "description": "Sign out [UNAUTHORIZED (Access-Token is wrong)]",
+          "link": "sessions/sign_out_[unauthorized_(access-token_is_wrong)].json",
+          "groups": "all",
+          "route": "api/v1/sessions",
+          "method": "delete"
+        },
+        {
+          "description": "Sign out [UNAUTHORIZED (Expired Access-Token)]",
+          "link": "sessions/sign_out_[unauthorized_(expired_access-token)].json",
+          "groups": "all",
+          "route": "api/v1/sessions",
+          "method": "delete"
+        },
+        {
+          "description": "Update push token",
+          "link": "sessions/update_push_token.json",
+          "groups": "all",
+          "route": "api/v1/sessions",
+          "method": "put"
+        },
+        {
+          "description": "Update push token [UNAUTHORIZED (Access-Token is wrong)]",
+          "link": "sessions/update_push_token_[unauthorized_(access-token_is_wrong)].json",
+          "groups": "all",
+          "route": "api/v1/sessions",
+          "method": "put"
+        },
+        {
+          "description": "Update push token [UNAUTHORIZED (Access-Token is expired)]",
+          "link": "sessions/update_push_token_[unauthorized_(access-token_is_expired)].json",
+          "groups": "all",
+          "route": "api/v1/sessions",
+          "method": "put"
+        },
+        {
+          "description": "Update access token and refresh token",
+          "link": "sessions/update_access_token_and_refresh_token.json",
+          "groups": "all",
+          "route": "api/v1/sessions",
+          "method": "put"
+        },
+        {
+          "description": "Update access token [UNAUTHORIZED (Access-Token is wrong)]",
+          "link": "sessions/update_access_token_[unauthorized_(access-token_is_wrong)].json",
+          "groups": "all",
+          "route": "api/v1/sessions",
+          "method": "put"
+        },
+        {
+          "description": "Update access token [UNAUTHORIZED (Access-Token is expired)]",
+          "link": "sessions/update_access_token_[unauthorized_(access-token_is_expired)].json",
+          "groups": "all",
+          "route": "api/v1/sessions",
+          "method": "put"
+        }
+      ]
+    }
+  ]
+}

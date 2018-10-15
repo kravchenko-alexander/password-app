@@ -1,0 +1,63 @@
+{
+  "resource": "Sessions",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/v1/sessions",
+  "description": "Login",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "user",
+      "required": true,
+      "name": "email",
+      "description": "User email"
+    },
+    {
+      "scope": "user",
+      "required": true,
+      "name": "password",
+      "description": "User password"
+    },
+    {
+      "scope": "session",
+      "required": true,
+      "name": "device",
+      "description": "Device type"
+    },
+    {
+      "scope": "session",
+      "required": false,
+      "name": "push_token",
+      "description": "Push token for platform notifications"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/sessions",
+      "request_body": "user[email]=inger%40streich.biz&user[password]=L0ve4ever%21&session[device]=web&session[push_token]=e9fb01f638ed32949643f801dd21735a&format=json",
+      "request_headers": {
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 265,\n  \"email\": \"inger@streich.biz\",\n  \"updated_at\": \"2018-10-14T20:19:54.790Z\",\n  \"created_at\": \"2018-10-14T20:19:54.790Z\"\n}",
+      "response_headers": {
+        "Access-Token": "ZRUYJZOY1539548394RMIZGTZV",
+        "Access-Token-Expired-At": "2018-10-14 21:19:54 UTC",
+        "Refresh-Token": "DEYENYVH1539548394NMFSAFWU",
+        "Refresh-Token-Expired-At": "2019-10-14 20:19:54 UTC",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:8080/api/v1/sessions\" -d 'user[email]=inger%40streich.biz&user[password]=L0ve4ever%21&session[device]=web&session[push_token]=e9fb01f638ed32949643f801dd21735a&format=json' -X POST \\\n\t-H \"Host: example.org\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

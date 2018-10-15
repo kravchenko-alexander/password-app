@@ -1,0 +1,69 @@
+{
+  "resource": "Registration",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/v1/registrations",
+  "description": "Create new user",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "user",
+      "required": true,
+      "name": "email",
+      "description": "Users email, format: ([^@\\s]+)@((?:[-a-z0-9]+\\.)+[a-z]{2,})"
+    },
+    {
+      "scope": "user",
+      "required": true,
+      "name": "password",
+      "description": "Users password, length: min - 6, max - 32"
+    },
+    {
+      "scope": "user",
+      "required": true,
+      "name": "password_confirmation",
+      "description": "Users password confirmation, should be equal to password"
+    },
+    {
+      "scope": "session",
+      "required": true,
+      "name": "device",
+      "description": "Device type, allowed values: [web, ios, android]"
+    },
+    {
+      "scope": "session",
+      "required": false,
+      "name": "push_token",
+      "description": "Push token, unique field in database, used for push notifications"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/registrations",
+      "request_body": "user[email]=dirk%40hills.com&user[password]=L0ve4ever%21&user[password_confirmation]=L0ve4ever%21&session[device]=ios&session[push_token]=3e25bace014e07bb4512d3d9e9dd40c5&format=json",
+      "request_headers": {
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 261,\n  \"email\": \"dirk@hills.com\",\n  \"updated_at\": \"2018-10-14T20:19:54.628Z\",\n  \"created_at\": \"2018-10-14T20:19:54.628Z\"\n}",
+      "response_headers": {
+        "Access-Token": "UCPQKHBA1539548394AOYBMMBY",
+        "Access-Token-Expired-At": "2018-10-14 21:19:54 UTC",
+        "Refresh-Token": "SMALIOMN1539548394UGBLOGLP",
+        "Refresh-Token-Expired-At": "2019-10-14 20:19:54 UTC",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:8080/api/v1/registrations\" -d 'user[email]=dirk%40hills.com&user[password]=L0ve4ever%21&user[password_confirmation]=L0ve4ever%21&session[device]=ios&session[push_token]=3e25bace014e07bb4512d3d9e9dd40c5&format=json' -X POST \\\n\t-H \"Host: example.org\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

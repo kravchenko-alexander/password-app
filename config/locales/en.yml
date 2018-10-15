@@ -1,0 +1,15 @@
+en:
+  activerecord:
+    errors:
+      email_format: 'has invalid format'
+  auth:
+    errors:
+      login: 'Invalid email or password'
+      authenticaion: 'Invalid access token'
+      current_password: 'Invalid current password'
+      refresh_token: 'Invalid refresh token'
+      unauthorized: 'You can see only your sets'
+  password:
+    decrypt:
+      error: 'Invalid access token for password set'
+      already_decrypted: 'Password set is already decrypted'

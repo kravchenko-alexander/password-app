@@ -1,0 +1,47 @@
+{
+  "resource": "Password Views",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "api/v1/password_views/:encrypted_token",
+  "description": "Get list [UNAUTHORIZED (Access-Token is expired)]",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "encrypted_token",
+      "description": "Password set link"
+    },
+    {
+      "required": false,
+      "name": "page",
+      "description": "Pagination, default 1"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/v1/password_views/73hJHKazsn%2F%2FQU2SLynW25qGul0czhFoBy4NNyhLs%2Bn90%2BJWtIKlildND%2BF0%0AxV5k%0A?page=1&format=json",
+      "request_body": null,
+      "request_headers": {
+        "Access-Token": "e5356bec571f1fd4b7330776337693ba",
+        "Host": "example.org"
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "format": "json"
+      },
+      "request_content_type": null,
+      "response_status": 401,
+      "response_status_text": "Unauthorized",
+      "response_body": "{\n  \"error\": \"Invalid access token\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://localhost:8080/api/v1/password_views/73hJHKazsn%2F%2FQU2SLynW25qGul0czhFoBy4NNyhLs%2Bn90%2BJWtIKlildND%2BF0%0AxV5k%0A?page=1&format=json\" -X GET \\\n\t-H \"Access-Token: e5356bec571f1fd4b7330776337693ba\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

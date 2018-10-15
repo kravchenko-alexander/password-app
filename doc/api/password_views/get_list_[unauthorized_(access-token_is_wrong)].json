@@ -1,0 +1,47 @@
+{
+  "resource": "Password Views",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "api/v1/password_views/:encrypted_token",
+  "description": "Get list [UNAUTHORIZED (Access-Token is wrong)]",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "encrypted_token",
+      "description": "Password set link"
+    },
+    {
+      "required": false,
+      "name": "page",
+      "description": "Pagination, default 1"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/v1/password_views/MwpSaTBjJpKhSmJ7sbUVuLwE4lAydZB5hp46sEpT0ntc2x2nYtV12Wyv04Iu%0A8TWd%0A?page=1&format=json",
+      "request_body": null,
+      "request_headers": {
+        "Access-Token": "",
+        "Host": "example.org"
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "format": "json"
+      },
+      "request_content_type": null,
+      "response_status": 401,
+      "response_status_text": "Unauthorized",
+      "response_body": "{\n  \"error\": \"Invalid access token\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://localhost:8080/api/v1/password_views/MwpSaTBjJpKhSmJ7sbUVuLwE4lAydZB5hp46sEpT0ntc2x2nYtV12Wyv04Iu%0A8TWd%0A?page=1&format=json\" -X GET \\\n\t-H \"Access-Token: \" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

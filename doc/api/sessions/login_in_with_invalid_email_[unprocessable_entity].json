@@ -1,0 +1,59 @@
+{
+  "resource": "Sessions",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/v1/sessions",
+  "description": "Login in with invalid email [UNPROCESSABLE ENTITY]",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "user",
+      "required": true,
+      "name": "email",
+      "description": "User email"
+    },
+    {
+      "scope": "user",
+      "required": true,
+      "name": "password",
+      "description": "User password"
+    },
+    {
+      "scope": "session",
+      "required": true,
+      "name": "device",
+      "description": "Device type"
+    },
+    {
+      "scope": "session",
+      "required": false,
+      "name": "push_token",
+      "description": "Push token for platform notifications"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/sessions",
+      "request_body": "user[email]=1234&user[password]=L0ve4ever%21&session[device]=web&session[push_token]=3cbf69e0888aa9c32a03fff3ada16886&format=json",
+      "request_headers": {
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"error\": \"Invalid email or password\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:8080/api/v1/sessions\" -d 'user[email]=1234&user[password]=L0ve4ever%21&session[device]=web&session[push_token]=3cbf69e0888aa9c32a03fff3ada16886&format=json' -X POST \\\n\t-H \"Host: example.org\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

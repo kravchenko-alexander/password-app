@@ -1,0 +1,6 @@
+/log
+/tmp
+/public/system
+/spec/tmp
+config/master.key
+.byebug_history
